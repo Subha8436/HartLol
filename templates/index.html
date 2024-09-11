@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Screening Platform</title>
+
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Fonts for futuristic look -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Welcome to the Futuristic Movie Platform</h1>
+        <p>Watch and Download Movies Instantly</p>
+    </header>
+
+    <!-- Search Bar -->
+    <section id="movie-search">
+        <input type="text" id="search-bar" placeholder="Search for a movie...">
+        <button id="search-btn">Search</button>
+    </section>
+
+    <!-- Movie Grid Section -->
+    <section id="movie-grid">
+        <!-- Movie cards will be dynamically injected here via JavaScript -->
+    </section>
+
+    <!-- Movie Player Modal (Hidden until a movie is clicked) -->
+    <div id="movie-player-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-modal">&times;</span>
+            <video id="movie-player" controls></video>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Futuristic Movie Platform. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
